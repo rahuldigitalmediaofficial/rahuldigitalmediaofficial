@@ -1,110 +1,341 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rahul Digital Media Official</title>
+
 <style>
-body{
-font-family: Arial;
+
+*{
 margin:0;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
 }
 
-header{
-background:#0a58ca;
+body{
+background:#f4f6fb;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#1e3a8a;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 color:white;
-padding:20px;
+position:sticky;
+top:0;
+}
+
+.navbar a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(120deg,#2d7df0,#244f8f);
+color:white;
+padding:90px 20px;
 text-align:center;
 }
 
-nav{
-background:#222;
-padding:10px;
-text-align:center;
+.hero h1{
+font-size:40px;
+margin-bottom:15px;
 }
 
-nav a{
-color:white;
-margin:10px;
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.hero a{
+background:white;
+color:#244f8f;
+padding:12px 30px;
+border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 }
 
-section{
-padding:40px;
+/* ABOUT */
+
+.about{
+padding:60px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.about-box{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 text-align:center;
 }
 
+/* COUNTERS */
+
+.counters{
+background:#244f8f;
+color:white;
+display:flex;
+justify-content:center;
+gap:60px;
+padding:50px;
+flex-wrap:wrap;
+}
+
+.counter{
+text-align:center;
+}
+
+.counter h2{
+font-size:35px;
+}
+
+/* SERVICES */
+
 .services{
+padding:60px 20px;
+text-align:center;
+}
+
+.service-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.service-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+padding:60px 20px;
+text-align:center;
+background:#f2f2f2;
+}
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.portfolio-item{
+background:white;
+padding:60px 20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* REVIEWS */
+
+.reviews{
+padding:60px 20px;
+text-align:center;
+}
+
+.review-card{
+background:white;
+padding:25px;
+max-width:600px;
+margin:20px auto;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+
+.contact{
+background:#1e3a8a;
+padding:50px 20px;
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:12px 25px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+}
+
+.call{background:#2196f3;}
+.email{background:#ff3b3b;}
+.whatsapp{background:#25D366;}
+
+/* FOOTER */
+
+.footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+flex-direction:column;
+}
+
+.counters{
+flex-direction:column;
 gap:20px;
 }
 
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:20px;
-}
 </style>
+
 </head>
 
 <body>
 
-<header>
+<div class="navbar">
+<h2>Rahul Digital Media</h2>
+<div>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<section class="hero" id="home">
 <h1>Rahul Digital Media Official</h1>
-<p>Professional Digital Services</p>
-</header>
+<p>Grow Your Business With Professional Digital Services</p>
+</section>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
-</nav>
-
-<section>
-<h2>Our Services</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>Website Design</h3>
-<p>Professional and responsive websites.</p>
-</div>
-
-<div class="card">
-<h3>Graphic Design</h3>
-<p>Logos, banners and social media designs.</p>
-</div>
-
-<div class="card">
-<h3>Video Editing</h3>
-<p>Professional video editing services.</p>
-</div>
-
-<div class="card">
-<h3>Social Media Management</h3>
-<p>Grow your brand online.</p>
-</div>
-
+<section class="about">
+<div class="about-box">
+<h2>⭐ About Us</h2>
+<p>
+Rahul Digital Media Official एक प्रोफेशनल डिजिटल सर्विस प्लेटफॉर्म है जहाँ हम Website Design, App Design, Graphic Design, Video Editing और Social Media Management जैसी सेवाएँ प्रदान करते हैं。
+</p>
 </div>
 </section>
 
-<section>
+<section class="counters">
+<div class="counter">
+<h2>500+</h2>
+<p>Clients</p>
+</div>
+<div class="counter">
+<h2>1000+</h2>
+<p>Projects</p>
+</div>
+<div class="counter">
+<h2>5+</h2>
+<p>Years Experience</p>
+</div>
+</section>
+
+<section class="services" id="services">
+<h2>Our Professional Services</h2>
+<div class="service-grid">
+<div class="service-card">📱 App Design</div>
+<div class="service-card">🌐 Website Design</div>
+<div class="service-card">🛒 E-Commerce Website Development</div>
+<div class="service-card">🎯 Landing Page Design</div>
+<div class="service-card">🔍 SEO (Search Engine Optimization)</div>
+<div class="service-card">📢 Google Ads Management</div>
+<div class="service-card">📊 Social Media Ads Management</div>
+<div class="service-card">📘 Facebook Page Management</div>
+<div class="service-card">📷 Instagram Page Management</div>
+<div class="service-card">✈ Telegram Channel Management</div>
+<div class="service-card">▶ YouTube Channel Management</div>
+<div class="service-card">🎬 Video Editing</div>
+<div class="service-card">🎨 Logo Design</div>
+<div class="service-card">🖼 Thumbnail Design</div>
+<div class="service-card">📱 Social Media Post Design</div>
+<div class="service-card">🪧 Banner Design</div>
+<div class="service-card">✅ Twitter (X) Account Management</div>
+<div class="service-card">💻 Full Website Development</div>
+</div>
+</section>
+
+<section class="portfolio" id="portfolio">
+<h2>Our Portfolio</h2>
+<div class="portfolio-grid">
+<div class="portfolio-item">Website Design</div>
+<div class="portfolio-item">Logo Design</div>
+<div class="portfolio-item">Video Editing</div>
+<div class="portfolio-item">Thumbnail Design</div>
+<div class="portfolio-item">App Design</div>
+<div class="portfolio-item">Poster Design</div>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<h2>Client Reviews</h2>
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>Rahul Digital Media provided amazing website design service.</p>
+</div>
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>Very professional and fast service.</p>
+</div>
+</section>
+
+<section class="contact" id="contact">
 <h2>Contact Us</h2>
-<p>Email: rahuldigitalmedia@email.com</p>
+<a href="tel:9608736379" class="call">📞 Call</a>
+<a href="mailto:rahuldigitalmediaofficial@gmail.com" class="email">📧 Email</a>
+<a href="https://wa.me/919608736379" class="whatsapp">💬 WhatsApp</a>
 </section>
 
-<footer>
-<p>© 2026 Rahul Digital Media Official</p>
-</footer>
+<div class="footer">
+© 2026 Rahul Digital Media Official | All Rights Reserved
+</div>
+
+<a href="https://wa.me/919608736379" class="whatsapp-float">💬</a>
 
 </body>
 </html>
